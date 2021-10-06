@@ -71,11 +71,10 @@ RUN \
 	tzdata && \
  echo "**** create abc user and make our folders ****" && \
  groupmod -g 1000 users && \
- useradd -u 1000 -U -d /data -s /bin/false abc && \
+ useradd -u 1000 -U -d /config -s /bin/false abc && \
  usermod -G users abc && \
  mkdir -p \
-	/app \
-  /data \
+	/app \  
 	/config \
 	/defaults && \
  mv /usr/bin/with-contenv /usr/bin/with-contenvb && \
